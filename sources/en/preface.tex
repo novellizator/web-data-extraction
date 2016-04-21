@@ -1,3 +1,45 @@
 \chapter*{Introduction}
-\addcontentsline{toc}{chapter}{Introduction}
+%\addcontentsline{toc}{chapter}{Introduction}
 
+Since the dawn of the Internet, the amount of information available has been multipying every year.
+With the increasing mass of data and growing complexity of its presentation it has become harder than ever to find collections of relevant information.
+
+In the early days, people managed to extract infomation from the webpages manually,
+ or by using simple ad-hoc scripts in general purpose languages.
+As the webpages got more complex and deep web got deeper, 
+ an increasing need arised, for a system that could scrape data effectively.
+These systems, precisely Web Data Extration Systems, have been developed
+ using a number of different approaches, which resulted 
+in a variety of advantages and disadvantages. 
+None of them seems to be accepted by the general public, and so, there cannot even be a community that would 
+take care of further "common" development of such solution.
+
+
+In this thesis we will research the pros and cons of the available solutions and will architect a system that would suit a need of a more general public.
+That system will have to be sufficiently lightweight, yet effective and would provide a good alernative to 
+the expensive commercial solutions. Our main focus will be laid upon extensionability and quick deployability, 
+in which we believe, we could get the edge against the commercial counterparts. 
+Alongside, we will try to point in some directions for the potential further development of the system.
+
+\section{Structure of the Thesis}
+This thesis is structured as follows:
+Chapter 1 defines the goal of the thesis and defines its structure.
+Chapter 2 introduces the taxonomy of the topic and describes the related work which gives rise to
+Chapter 3 that describes our, our contribution, the Serrano language, whilst
+Chapter 4 discusses the particular strong and weak points of it and compares it to the rivals whereas
+Chapter 5 discusses real-world applications and clients that have used the project 
+
+Q: there should I mention the clients? (avast, adblock, magneto,...) in the last chapter?
+
+
+
+
+Need for extracting information derives from the fact that once extracted, the data can be handled in a way similar to instances of a traditional database.
+
+1.1 Challenges of Web Data Extraction
+Q: not sure wher to put it
+- human effort - provide a high degree of automation
+- check for correctness (data consistency)
+- ability to process large volumes of data
+- ....
+- maintainance - constant change of the web
