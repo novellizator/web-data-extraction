@@ -4,10 +4,79 @@ As we mentioned in the introduction, our main work lies in architecting a web da
 However, we cannot proceed further unless we define what exactly it means.
 
 
+\section{Web Technologies}
+In this section we will describe some characteristic features of the Data we are to manipulate and some techniques and standards that are heavily used.
+
+\subsection{The World Wide Web Page}
+\label{sec:phase1Interaction}
+The world wide web is a space consisting of documents(or, \textit{pages}) that are identified by a~URL and may contain \textit{hyperlinks} to other documents.
+The prevalent language that is used for writing these pages is HTML\cite{html5}. 
+This language enables us to introduce almost arbitrary structure into the document and with the help of CSS~\cite{css} the author of the document can create visually pleasing design.
+
+HTML makes a document semi-structured and helps both users and robots to better navigate throughout the document. One of the biggest benefits is, that we can de-facto use the same tool set as if we had plain XML. In particular, the XML Path language, shortly the XPath language\cite{xpath}.
+??TODO: describe XPATH language
+
+On the top of XPath, there is an orthogonal solution to navigating within the web pages, namely CSS selectors\cite{cssSelectors}. They are predominantly used by web designers to target appropriate elements in the web page, but their use is much wider. A very popular javascript library jQuery\cite{jQuery} uses a superset of them for traversal and manipulation of the DOM\cite{jQuerySelectors}. They offer an alternative way of targeting elements.
+??TODO: make a picture of a page source, describe tags, --> selectors (jquery=css1-3 +....)
+
+\subsection{Web 2.0 and the Deep Web}
+As the web technologies matured, the deep web came into existence. Simple web presentations
+changed into robust applications with dynamically generated content.
+??TODO simple scraping is not enough, we need to simulate user actions,AJAX
 
 
 
-An~example citation: \cite{Andel07}
+
+\section{Web Data Extraction System}
+When extracting data, we fulfill the goal with a \textit{Web Data Extraction System} (shortly, a System).
+We can loosely define it as a platform that implements \textit{a sequence of procedures that extract information from Web sources} \cite{laender2002brief}.
+
+These systems vary greatly, however their main responsibilities have been recognized by \cite{ferrara2014web} and are as follows:
+\begin{enumerate}
+    \item \textit{Interaction with Web pages.} This is the first responsibility of a~System. Ideally, the system has the same interaction capabilities as a human user.~\ref{sec:phase1Interaction}
+    With the Web 2.0 it has become increasingly harder, since we requires manipulation with dynamic data and the deep web.
+    \item \textit{Generation of a wrapper.} Wrapper is a program that interacts with the web page and returns the extracted information. One of the main initiatives for addressing the problem of wrapper generation was the shift from general-purpose languages towards the domain-specific wrapper generation languages like TSIMMIS \cite{hammer1997TSIMMIS} or FLORID \cite{ludascher1998FLORID}. Although we can develop wrappers manually, robust systems enable us to generate wrappers through a graphical interface.
+    
+    \item \textit{Automation and Extraction.} The point of a System is to facilitate extraction and replace humans. Hence, it's important to bring time savings to the table and to sacrifice very little on robustness
+    \item \textit{Data transformation.} Data need to be cleaned, deduplicated,...
+    \item \textit{Use of extracted data.} The output of the System is then stored into the database, or further processed. Therefore, we need to transform the data into some universal format. Most viable options are, including but not limited to, XML and JSON. 
+\end{enumerate}
+
+
+\subsection{Regular expressions}
+
+
+\subsection{Wrapper generation}
+One of the first attempts to easen up the wrapper generation was the shift from the geenral purpose languages to domain-specific languages
+- examples blablabla
+
+
+\section{Related work}
+Now that we have categorized the main responsibilities of a System, we will describe some implementations and will try to categorize them.
+
+
+
+
+\section{Usage of the Web Data Extraction Systems}
+One can do marvellous things with the World Wide Web \cite{brin1998can}.
+In this section we will quickly go through the showcases, which will deepen our motivation and shed light upon areas that need some improvement.
+
+Many of the systems have been developed by groups of academics, or by huge businesses who have invested hundreds to thousands of man days into the solution. It is hard to make a system that would outperform them in all areas.
+
+....showcases
+
+
+\section{Conclusion}
+As many use cases have demonstrated, these are the core areas, most users will most likely expect the future System to fulfill:
+??TODO More importantly, the segment we identified promising (web developers)+many system are born and die, because the web changes
+
+\begin{itemize}
+    \item Extensionability - for the future
+    \item Easiness to use + lightweightness
+    \item performance - paralelisation, delegation
+\end{itemize}
+
+
 
 These days, web data extraction is getting more and more important.
 \section{Title of the first subchapter of the first chapter}
